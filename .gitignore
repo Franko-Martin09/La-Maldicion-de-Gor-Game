@@ -1,0 +1,6 @@
+*.exe
+*.o
+*.tmp
+*.log
+bitacora.txt
+NT bitacora.txt
