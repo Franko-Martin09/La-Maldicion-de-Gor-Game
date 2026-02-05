@@ -10,5 +10,5 @@ Mi aporte principal incluyó:
 - Lectura/escritura de archivos
 
  Proyecto realizado junto a:
-- Orodeski, Brian
+- Horodeski, Brian
 - Villegas, Alejandro
