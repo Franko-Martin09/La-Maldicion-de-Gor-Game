@@ -1,0 +1,35 @@
+# Project: La_maldicion_de_Gor
+# Makefile created by Red Panda C++ 2.25.1
+
+CPP      = g++.exe
+CC       = gcc.exe
+WINDRES  = windres.exe
+RES      = La_maldicion_de_Gor_private.res
+OBJ      = main.o $(RES)
+LINKOBJ  = main.o La_maldicion_de_Gor_private.res
+CLEANOBJ  =  main.o  La_maldicion_de_Gor_private.res La_maldicion_de_Gor.exe
+LIBS     =  -lwinmm
+INCS     =  
+CXXINCS  =  
+BIN      = La_maldicion_de_Gor.exe
+CXXFLAGS = $(CXXINCS)  -g3 -pipe -Wall -D__DEBUG__
+CFLAGS   = $(INCS)  -g3 -pipe -Wall -D__DEBUG__
+RM       = del /q /f
+WINDRESFLAGS  = 
+
+.PHONY: all all-before all-after clean clean-custom
+
+all: all-before $(BIN) all-after
+
+clean: clean-custom
+	-$(RM) $(CLEANOBJ) > NUL 2>&1
+
+$(BIN): $(OBJ)
+	$(CC) $(LINKOBJ) -o $(BIN) $(LIBS)
+
+main.o: main.c
+	$(CC) -c main.c -o main.o $(CFLAGS)  -finput-charset=UTF-8 -fexec-charset=windows-1252
+
+La_maldicion_de_Gor_private.res: La_maldicion_de_Gor_private.rc 
+	$(WINDRES) -i La_maldicion_de_Gor_private.rc --input-format=rc -o La_maldicion_de_Gor_private.res -O coff $(WINDRESFLAGS) 
+
