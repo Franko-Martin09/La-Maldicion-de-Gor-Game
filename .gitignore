@@ -2,5 +2,16 @@
 *.o
 *.tmp
 *.log
-bitacora.txt
-NT bitacora.txt
+*.cbp
+*.dev
+*.res
+*.rc
+bin/
+obj/
+lib/
+*.debug
+*.depend
+*.layout
+*_private-*
+.DS_Store
+Thumbs.db
